@@ -7,10 +7,10 @@ def normal_lyrics():
 	song = data()
 	# Gets lyrics from genius.com using data function in fetch_data
 
-	with open('song.lyrics.txt', 'w', encoding= 'utf-8') as text_file:
+	with open('song_lyrics.txt', 'w', encoding= 'utf-8') as text_file:
 		text_file.write(song)
 		# Writes lyrics to a text file
 
 	sing = gTTS(song)
-	sing.save('lyrics.mp3')
+	sing.save('song_lyrics.mp3')
 	# Creates mp3 file of song
