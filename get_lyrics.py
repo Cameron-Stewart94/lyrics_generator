@@ -19,6 +19,5 @@ def normal_lyrics():
 	file_location_2 = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.mp3')
 
 	sing = gTTS(song)
-	with open (file_location_2, 'w') as mp3_file:
-		mp3_file.write(sing)
+	sing.save(file_location_2)
 	# Creates mp3 file of song
