@@ -27,3 +27,6 @@ def data():
 	# Scraps desired song from genius.com using requests and BeautifulSoup
 
 	return(div)
+
+
+print(data())
