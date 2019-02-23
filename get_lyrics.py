@@ -24,6 +24,6 @@ def normal_lyrics():
 	remove_verse_headings = re.sub("[\(\[].*?[\)\]]", "", remove_verse_headings)
 	# Uses re to remove words in [] brackets - this removes verse heading so tts doesn't read them
 
-	sing = gTTS(song)
+	sing = gTTS(remove_verse_headings)
 	sing.save(mp3_file_location)
 	# Creates mp3 file of song
