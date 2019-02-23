@@ -15,5 +15,5 @@ def normal_lyrics():
 		# Writes lyrics to a text file
 
 	sing = gTTS(song)
-	sing.save('song_lyrics.mp3')
+	sing.write_to(file_location)
 	# Creates mp3 file of song
