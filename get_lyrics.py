@@ -21,7 +21,7 @@ def normal_lyrics():
 	# Creates path to save .txt file(c://Ellie/Desktop/songs)
 
 	remove_verse_headings = song
-	remove_verse_headings = re.sub("[\(\[].*?[\)\]]", "", remove_verse_headings)
+	remove_verse_headings = re.sub("re.sub("[\(\[].*?[\)\]]", "", remove_verse_headings)
 	# Uses re to remove words in [] brackets - this removes verse heading so tts doesn't read them
 
 	sing = gTTS(remove_verse_headings)
