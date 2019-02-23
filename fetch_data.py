@@ -28,11 +28,3 @@ def data():
 	# Scraps desired song from genius.com using requests and BeautifulSoup
 
 	return(div)
-
-
-lyrics = data()
-
-x = lyrics
-x = re.sub("[\(\[].*?[\)\]]", "", x)
-
-print(x)
