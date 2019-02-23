@@ -1,6 +1,7 @@
 from fetch_data import data
 from gtts import gTTS
 import os
+import re
 
 
 def normal_lyrics():
@@ -9,15 +10,20 @@ def normal_lyrics():
 	song = data()
 	# Gets lyrics from genius.com using data function in fetch_data
 
-	file_location = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.txt')
+	txt_file_location = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.txt')
+	# Creates path to save .txt file(c://Ellie/Desktop/songs)
 
-
-	with open(file_location, 'w', encoding= 'utf-8') as text_file:
+	with open(txt_file_location, 'w', encoding= 'utf-8') as text_file:
 		text_file.write(song)
 		# Writes lyrics to a text file
 
-	file_location_2 = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.mp3')
+	mp3_file_location = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.mp3')
+	# Creates path to save .txt file(c://Ellie/Desktop/songs)
+
+	remove_verse_headings = song
+	remove_verse_headings = re.sub("[\(\[].*?[\)\]]", "", remove_verse_headings)
+	# Uses re to remove words in [] brackets - this removes verse heading so tts doesn't read them
 
 	sing = gTTS(song)
-	sing.save(file_location_2)
+	sing.save(mp3_file_location)
 	# Creates mp3 file of song
