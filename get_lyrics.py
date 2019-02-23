@@ -2,6 +2,7 @@ from fetch_data import data
 from gtts import gTTS
 import os
 
+
 def normal_lyrics():
 	# Function to create file with song lyrics and play them out loud
 
@@ -10,10 +11,14 @@ def normal_lyrics():
 
 	file_location = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.txt')
 
+
 	with open(file_location, 'w', encoding= 'utf-8') as text_file:
 		text_file.write(song)
 		# Writes lyrics to a text file
 
+	file_location_2 = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.mp3')
+
 	sing = gTTS(song)
-	sing.write_to(file_location)
+	with open (file_location_2 'w') as mp3_file:
+		mp3_file.write(sing)
 	# Creates mp3 file of song
