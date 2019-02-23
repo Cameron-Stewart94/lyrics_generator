@@ -33,6 +33,6 @@ def data():
 lyrics = data()
 
 x = lyrics
-re.sub("[\(\[].*?[\)\]]", "", x)
+x = re.sub("[\(\[].*?[\)\]]", "", x)
 
 print(x)
