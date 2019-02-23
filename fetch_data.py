@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 
 
 def data():
@@ -29,4 +30,9 @@ def data():
 	return(div)
 
 
-print(data())
+lyrics = data()
+
+x = lyrics
+re.sub("[\(\[].*?[\)\]]", "", x)
+
+print(x)
