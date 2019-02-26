@@ -10,7 +10,7 @@ def normal_lyrics():
 	song = data()
 	# Gets lyrics from genius.com using data function in fetch_data
 
-	txt_file_location = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.txt')
+	txt_file_location = os.path.join(os.environ['USERPROFILE'], 'Python', 'Song Lyrics', 'lyrics.txt')
 	# Creates path to save .txt file(c://Ellie/Desktop/songs)
 
 	with open(txt_file_location, 'w', encoding= 'utf-8') as text_file:
