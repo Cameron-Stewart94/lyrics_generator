@@ -17,7 +17,7 @@ def normal_lyrics():
 		text_file.write(song)
 		# Writes lyrics to a text file
 
-	mp3_file_location = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'songs', 'lyrics.mp3')
+	mp3_file_location = os.path.join(os.environ['USERPROFILE'], 'Python', 'Song Lyrics', 'lyrics.mp3')
 	# Creates path to save .txt file(c://Ellie/Desktop/songs)
 
 	remove_verse_headings = song
