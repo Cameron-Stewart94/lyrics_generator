@@ -9,7 +9,8 @@ def ask_user():
 def ask_user_again():
 	# Funtion asks user for more inputs until told to stop
 
-	while ask_again == True:
+    ask_again = True
+    while ask_again == True:
 		# Loop asks for input until accepted input is entered
 
 		choose_again = input('Choose another song?: ')
