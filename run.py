@@ -20,7 +20,11 @@ def run_programme():
 	song_lyrics_generator.write_to_mp3_file()
 	# Writes song to mp3 file
 
-	ask_user_again()
+	another_song = ask_user_again()
 	# Asks user if they would like to choose another song
+
+	if another_song == True:
+		run_programme()
+
 
 run_programme()

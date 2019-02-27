@@ -9,19 +9,19 @@ def ask_user():
 def ask_user_again():
 	# Funtion asks user for more inputs until told to stop
 
-
-	another_choice = True
-	while another_choice == True:
+	while ask_again == True:
 		# Loop asks for input until accepted input is entered
 
 		choose_again = input('Choose another song?: ')
 		choose_again = choose_again.lower()
 
 		if choose_again == 'yes' or choose_again == 'y':
-			user_choices = ask_user()
+			another_choice = True
+            ask_again = False
 
 		elif choose_again == 'no' or choose_again == 'n':
 			another_choice = False
+            ask_again = False
 
 		else:
 			print('Invalid choice, try again.')
