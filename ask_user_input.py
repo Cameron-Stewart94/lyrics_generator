@@ -25,7 +25,7 @@ def ask_user_again():
             ask_again = False
 
         else:
-			print('Invalid choice, try again.')
-		# Allows user to pick another song
+            print('Invalid choice, try again.')
+            # Allows user to pick another song
 
-	return
+    return another_choice
