@@ -17,6 +17,7 @@ class lyrics:
     def __repr__(self):
         # Function return song name and artis name when printed
         user_message = 'You chose {song}, by {artist}'.format(song=self.song_name, artist=self.artist_name)
+        user_message = user_message.lower()
         return titlecase(user_message)
 
     def fetch_data(self):
