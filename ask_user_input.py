@@ -1,9 +1,9 @@
 def ask_user():
-	# Funtion to ask user for song and artist input, and returns choices in dict
-	artist_choice = input('Enter an Artist: ')
-	song_choice = input('Enter a Song: ')
+    # Funtion to ask user for song and artist input, and returns choices in dict
+    artist_choice = input('Enter an Artist: ')
+    song_choice = input('Enter a Song: ')
 
-	return {'Artist' : artist_choice, 'Song': song_choice}
+    return {'Artist' : artist_choice, 'Song': song_choice}
 
 
 def ask_user_again():

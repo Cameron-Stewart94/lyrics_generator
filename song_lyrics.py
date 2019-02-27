@@ -46,27 +46,27 @@ class lyrics:
         return div
 
     def write_to_txt_file(self):
-            # Funtion writes song lyrics to txt file and saves on PC
-            txt_file_location = os.path.join(os.environ['USERPROFILE'], 'Python', 'Song Lyrics', 'lyrics.txt')
-            # Creates path to save .txt file(c://Ellie/Desktop/songs)
+        # Funtion writes song lyrics to txt file and saves on PC
+        txt_file_location = os.path.join(os.environ['USERPROFILE'], 'Python', 'Song Lyrics', 'lyrics.txt')
+        # Creates path to save .txt file(c://Ellie/Desktop/songs)
 
-            with open(txt_file_location, 'w', encoding= 'utf-8') as text_file:
-                text_file.write(self.song_lyrics)
-                # Writes lyrics to a text file
+        with open(txt_file_location, 'w', encoding= 'utf-8') as text_file:
+            text_file.write(self.song_lyrics)
+            # Writes lyrics to a text file
 
-            return
+        return
 
     def write_to_mp3_file(self):
-            # Function writes song lyrics to mp3 file and saves on PC
-            mp3_file_location = os.path.join(os.environ['USERPROFILE'], 'Python', 'Song Lyrics', 'lyrics.mp3')
-        	# Creates path to save .txt file(c://Ellie/Desktop/songs)
+        # Function writes song lyrics to mp3 file and saves on PC
+        mp3_file_location = os.path.join(os.environ['USERPROFILE'], 'Python', 'Song Lyrics', 'lyrics.mp3')
+        # Creates path to save .txt file(c://Ellie/Desktop/songs)
 
-            remove_verse_headings = self.song_lyrics
-            remove_verse_headings = re.sub("\[[^]]+\]", "", remove_verse_headings)
-        	# Uses re to remove words in [] brackets - this removes verse heading so tts doesn't read them
+        remove_verse_headings = self.song_lyrics
+        remove_verse_headings = re.sub("\[[^]]+\]", "", remove_verse_headings)
+        # Uses re to remove words in [] brackets - this removes verse heading so tts doesn't read them
 
-            sing = gTTS(remove_verse_headings)
-            sing.save(mp3_file_location)
-        	# Creates mp3 file of song
+        sing = gTTS(remove_verse_headings)
+        sing.save(mp3_file_location)
+        # Creates mp3 file of song
 
-            return
+        return
