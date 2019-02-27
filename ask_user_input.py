@@ -11,20 +11,20 @@ def ask_user_again():
 
     ask_again = True
     while ask_again == True:
-		# Loop asks for input until accepted input is entered
+        # Loop asks for input until accepted input is entered
 
-		choose_again = input('Choose another song?: ')
-		choose_again = choose_again.lower()
+        choose_again = input('Choose another song?: ')
+        choose_again = choose_again.lower()
 
-		if choose_again == 'yes' or choose_again == 'y':
-			another_choice = True
+        if choose_again == 'yes' or choose_again == 'y':
+            another_choice = True
             ask_again = False
 
-		elif choose_again == 'no' or choose_again == 'n':
-			another_choice = False
+        elif choose_again == 'no' or choose_again == 'n':
+            another_choice = False
             ask_again = False
 
-		else:
+        else:
 			print('Invalid choice, try again.')
 		# Allows user to pick another song
 
