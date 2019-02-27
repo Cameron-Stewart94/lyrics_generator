@@ -11,6 +11,7 @@ def ask_user_again():
 
     valid_choices_yes = ['Yes', 'Y', 'Ye', 'Yep', 'Yeah', 'Yup']
     valid_choices_no = ['No', 'N', 'Nope', 'Naa']
+    # Creates two lists of valid yes and no responses
 
     ask_again = True
     while ask_again:
