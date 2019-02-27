@@ -3,6 +3,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from gtts import gTTS
+from titlecase import titlecase
 
 class lyrics:
 # Class to generate song lyrics from user input
@@ -15,7 +16,8 @@ class lyrics:
 
     def __repr__(self):
         # Function return song name and artis name when printed
-        return 'You chose {song}, by {artist}'.format(song=self.song, artist=self.artist)
+        choice_message = 'You chose {song}, by {artist}'.format(song=self.song, artist=self.artist)
+        choice_message = titlecase(choice_message)
 
     def fetch_data(self):
         #Function fetches lyrics from genius
