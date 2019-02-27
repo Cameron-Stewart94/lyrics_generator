@@ -9,20 +9,23 @@ def ask_user():
 def ask_user_again():
     # Funtion asks user for more inputs until told to stop
 
+    valid_choices_yes = ['Yes', 'Y', 'Ye', 'Yep', 'Yeah', 'Yup']
+    valid_choices_no = ['No', 'N', 'Nope', 'Naa']
+
     ask_again = True
     while ask_again == True:
         # Loop asks if user for input until valid input is entered
 
         choose_again = input('Choose another song?: ')
-        choose_again = choose_again.lower()
+        choose_again = choose_again.capitalise()
         # Asks user wether they want to choose another song
 
-        if choose_again == 'yes' or choose_again == 'y':
+        if choose_again in valid_choices_yes:
             another_choice = True
             ask_again = False
             # If user chooses yes, programme will run again and ask again loop stops
 
-        elif choose_again == 'no' or choose_again == 'n':
+        elif choose_again in valid_choices_no:
             another_choice = False
             ask_again = False
             # If user chooses no, programme will not run again and ask again loop stops
