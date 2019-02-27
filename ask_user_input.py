@@ -7,7 +7,7 @@ def ask_user():
 
 
 def ask_user_again():
-    # Funtion asks user for more inputs until told to stop
+    # Function asks user for more inputs until told to stop
 
     valid_choices_yes = ['Yes', 'Y', 'Ye', 'Yep', 'Yeah', 'Yup']
     valid_choices_no = ['No', 'N', 'Nope', 'Naa']
