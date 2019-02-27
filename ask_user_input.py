@@ -13,7 +13,7 @@ def ask_user_again():
     valid_choices_no = ['No', 'N', 'Nope', 'Naa']
 
     ask_again = True
-    while ask_again == True:
+    while ask_again:
         # Loop asks if user for input until valid input is entered
 
         choose_again = input('Choose another song?: ')
