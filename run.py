@@ -14,7 +14,7 @@ def run_programme():
     try:
         song_lyrics_generator.fetch_data()
         # Calls method to fetch song data from the web
-    except NoneType:
+    except:
         print('Invalid artist or song, try again...')
         run_programme()
 
