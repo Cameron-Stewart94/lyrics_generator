@@ -7,25 +7,28 @@ def ask_user():
 
 
 def ask_user_again():
-	# Funtion asks user for more inputs until told to stop
+    # Funtion asks user for more inputs until told to stop
 
     ask_again = True
     while ask_again == True:
-        # Loop asks for input until accepted input is entered
+        # Loop asks if user for input until valid input is entered
 
         choose_again = input('Choose another song?: ')
         choose_again = choose_again.lower()
+        # Asks user wether they want to choose another song
 
         if choose_again == 'yes' or choose_again == 'y':
             another_choice = True
             ask_again = False
+            # If user chooses yes, programme will run again and ask again loop stops
 
         elif choose_again == 'no' or choose_again == 'n':
             another_choice = False
             ask_again = False
+            # If user chooses no, programme will not run again and ask again loop stops
 
         else:
             print('Invalid choice, try again.')
-            # Allows user to pick another song
+            # If user inputs invalid input, ask again loop runs again
 
     return another_choice
