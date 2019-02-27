@@ -17,7 +17,7 @@ def ask_user_again():
         # Loop asks if user for input until valid input is entered
 
         choose_again = input('Choose another song?: ')
-        choose_again = choose_again.capitalise()
+        choose_again = choose_again.capitalize()
         # Asks user wether they want to choose another song
 
         if choose_again in valid_choices_yes:
