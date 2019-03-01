@@ -11,8 +11,8 @@ def run_programme():
     try:
         song_lyrics_generator.fetch_data()
     except:
-		print('Invalid choice, try again')
-	else:
+        print('Invalid choice, try again...')
+    else:
         print(song_lyrics_generator)
 	    #Lets user know their choice of song
 
