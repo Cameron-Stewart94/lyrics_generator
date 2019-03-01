@@ -17,7 +17,7 @@ class lyrics:
 
     def __repr__(self):
         # Function return song name and artis name when printed
-        return 'You chose {song}, by {artist}...'.format(song=self.title, artist=self.artist_fullname)
+        return 'You chose {song}, by {artist}...'.format(song=self.song_name, artist=self.artist_name)
 
     def fetch_data(self):
         #Function fetches lyrics from genius
