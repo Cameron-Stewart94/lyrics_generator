@@ -8,28 +8,23 @@ def run_programme():
     song_lyrics_generator = lyrics(user_choices['Artist'], user_choices['Song'])
     # Creates instance of song_lyrics_generator
 
-    try:
-        song_lyrics_generator.fetch_data()
-        # Calls method to fetch song data from the web
-    except:
-        print('Invalid artist or song, try again...')
+	song_lyrics_generator.fetch_data()
+	
+    print(song_lyrics_generator)
+	#Lets user know their choice of song
+
+    song_lyrics_generator.write_to_txt_file()
+    # Writes song to text file
+
+    song_lyrics_generator.write_to_mp3_file()
+    # Writes song to mp3 file
+
+    another_song = ask_user_again()
+    # Asks user if they would like to choose another song
+
+    if another_song == True:
         run_programme()
-    else:
-        print(song_lyrics_generator)
-		#Lets user know their choice of song
-
-        song_lyrics_generator.write_to_txt_file()
-        # Writes song to text file
-
-        song_lyrics_generator.write_to_mp3_file()
-        # Writes song to mp3 file
-
-        another_song = ask_user_again()
-        # Asks user if they would like to choose another song
-
-        if another_song == True:
-            run_programme()
-        # Runs Programme again if user asks it to
+    # Runs Programme again if user asks it to
 
 
 run_programme()
