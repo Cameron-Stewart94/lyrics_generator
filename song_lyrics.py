@@ -8,13 +8,11 @@ from titlecase import titlecase
 class lyrics:
 # Class to generate song lyrics from user input
 
-    def __init__(self, artist_name, song_name, song_lyrics='', artist_fullname = '', title ='', description =''):
+    def __init__(self, artist_name, song_name, song_lyrics='', description =''):
         # Function initialises lyrics class
         self.artist_name = artist_name
         self.song_name = song_name
         self.song_lyrics = song_lyrics
-        self.artist_fullname = artist_fullname
-        self.title = title
         self.description = description
 
     def __repr__(self):
@@ -54,8 +52,8 @@ class lyrics:
         song_info = remove_whitespace(song_info)
 
         self.song_lyrics += html_lyrics
-        self.title += song_info[0]
-        self.artist_fullname += song_info[1]
+        self.song_name = song_info[0]
+        self.artist_name = song_info[1]
         self.description += '\n'.join(song_info[2 : ])
         return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
 
