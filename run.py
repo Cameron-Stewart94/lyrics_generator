@@ -17,19 +17,19 @@ def run_programme():
     except:
         print('Invalid artist or song, try again...')
         run_programme()
+    else:
+        song_lyrics_generator.write_to_txt_file()
+        # Writes song to text file
 
-    song_lyrics_generator.write_to_txt_file()
-    # Writes song to text file
+        song_lyrics_generator.write_to_mp3_file()
+        # Writes song to mp3 file
 
-    song_lyrics_generator.write_to_mp3_file()
-    # Writes song to mp3 file
+        another_song = ask_user_again()
+        # Asks user if they would like to choose another song
 
-    another_song = ask_user_again()
-    # Asks user if they would like to choose another song
-
-    if another_song == True:
-        run_programme()
-        # Runs Programme again if user asks it to
+        if another_song == True:
+            run_programme()
+            # Runs Programme again if user asks it to
 
 
 run_programme()
