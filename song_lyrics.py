@@ -42,9 +42,16 @@ class lyrics:
         source = requests.get(website).text
         soup = BeautifulSoup(source, 'lxml')
         html_lyrics = soup.find('div', class_ = 'lyrics').text
-        song_info = soup.find('div', class_ = 'header_with_cover_art_primary_info')
-        song_info = song_info.splitlines()
+        song_info = soup.find('div', class_ = 'header_with_cover_art-primary_info').text
         # Scraps desired song from genius.com using requests and BeautifulSoup
+
+        def remove_whitespace(string):
+            #Funtion removes blank lines from song_info string
+            song_info_lst = string.split('\n')
+            song_info_lst = {i for i in string if len(i) > 0}
+            return '\n'.join(song_info_lst)
+
+        song_info = remove_whitespace(song_info)
 
         self.song_lyrics += html_lyrics
         self.artist_fullname += song_info[0]
