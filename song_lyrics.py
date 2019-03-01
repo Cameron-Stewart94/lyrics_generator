@@ -48,7 +48,7 @@ class lyrics:
         def remove_whitespace(string):
             #Funtion removes blank lines from song_info string
             song_info_lst = string.split('\n')
-            song_info_lst = {i for i in string if len(i) > 0}
+            song_info_lst = [i for i in string if len(i) > 0]
             return song_info_lst
 
         song_info = remove_whitespace(song_info)
