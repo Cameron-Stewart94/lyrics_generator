@@ -54,8 +54,8 @@ class lyrics:
         song_info = remove_whitespace(song_info)
 
         self.song_lyrics += html_lyrics
-        self.artist_fullname += song_info[0]
-        self.title += song_info[1]
+        self.title += song_info[0]
+        self.artist_fullname += song_info[1]
         self.description += '\n'.join(song_info[2 : ])
         return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
 
