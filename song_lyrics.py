@@ -8,7 +8,7 @@ from titlecase import titlecase
 class lyrics:
 # Class to generate song lyrics from user input
 
-    def __init__(self, artist_name, song_name, song_lyrics='', artist_fullname = '', title ='' description =''):
+    def __init__(self, artist_name, song_name, song_lyrics='', artist_fullname = '', title ='', description =''):
         # Function initialises lyrics class
         self.artist_name = artist_name
         self.song_name = song_name
