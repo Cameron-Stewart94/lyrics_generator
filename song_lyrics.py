@@ -47,8 +47,8 @@ class lyrics:
         # Scraps desired song from genius.com using requests and BeautifulSoup
 
         self.song_lyrics += html_lyrics
-        self.artist_info += song_info[0]
-        self.song_info += song_info[1]
+        self.artist_fullname += song_info[0]
+        self.title += song_info[1]
         self.description += '\n'.join(song_info[2 : ])
         return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
 
