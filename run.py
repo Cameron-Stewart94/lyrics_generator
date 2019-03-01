@@ -8,8 +8,8 @@ def run_programme():
     song_lyrics_generator = lyrics(user_choices['Artist'], user_choices['Song'])
     # Creates instance of song_lyrics_generator
 
-	song_lyrics_generator.fetch_data()
-	
+    song_lyrics_generator.fetch_data()
+
     print(song_lyrics_generator)
 	#Lets user know their choice of song
 
