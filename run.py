@@ -8,7 +8,7 @@ def run_programme():
     song_lyrics_generator = lyrics(user_choices['Artist'], user_choices['Song'])
     # Creates instance of song_lyrics_generator
 
-	try:
+    try:
         song_lyrics_generator.fetch_data()
         # Calls method to fetch song data from the web
     except:
