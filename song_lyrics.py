@@ -8,16 +8,18 @@ from titlecase import titlecase
 class lyrics:
 # Class to generate song lyrics from user input
 
-    def __init__(self, artist_name, song_name, song_lyrics=''):
+    def __init__(self, artist_name, song_name, song_lyrics='', artist_fullname = '', title ='' description =''):
         # Function initialises lyrics class
         self.artist_name = artist_name
         self.song_name = song_name
         self.song_lyrics = song_lyrics
+        self.artist_fullname = artist_fullname
+        self.title = title
+        self.description = description
 
     def __repr__(self):
         # Function return song name and artis name when printed
-        user_message = 'You chose {song}, by {artist}'.format(song=self.song_name, artist=self.artist_name)
-        return user_message.upper()
+        return 'You chose {song}, by {artist}...'.format(song=self.title, artist=self.artist_fullname)
 
     def fetch_data(self):
         #Function fetches lyrics from genius
@@ -40,10 +42,15 @@ class lyrics:
         source = requests.get(website).text
         soup = BeautifulSoup(source, 'lxml')
         html_lyrics = soup.find('div', class_ = 'lyrics').text
+        song_info = soup.find('div', class_ = 'header_with_cover_art_primary_info')
+        song_info = song_info.splitlines()
         # Scraps desired song from genius.com using requests and BeautifulSoup
 
         self.song_lyrics += html_lyrics
-        return html_lyrics
+        self.artist_info += song_info[0]
+        self.song_info += song_info[1]
+        self.description += '\n'.join(song_info[2 : ])
+        return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
 
     def write_to_txt_file(self):
         # Funtion writes song lyrics to txt file and saves on PC
