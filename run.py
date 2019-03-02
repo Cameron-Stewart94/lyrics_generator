@@ -14,7 +14,7 @@ def run_programme():
         print('Invalid choice, try again...')
         run_programme()
     else:
-        print(song_lyrics_generator())
+        print(song_lyrics_generator)
 
         song_lyrics_generator.write_to_txt_file()
             # Writes song to text file
