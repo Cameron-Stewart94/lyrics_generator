@@ -15,7 +15,7 @@ def run_programme():
         run_programme()
     else:
         print(song_lyrics_generator)
-	    #Lets user know their choice of song
+        #Lets user know their choice of song
 
         song_lyrics_generator.write_to_txt_file()
         # Writes song to text file
