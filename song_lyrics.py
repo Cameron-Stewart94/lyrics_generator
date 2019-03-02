@@ -30,7 +30,6 @@ class lyrics:
             artist_name = '-'.join(artist_name)
             # Takes artist input and formats string as needed in genius url
 
-            song_name = self.song_name
             song_name = song_name.split()
             song_name = '-'.join(song_name)
             # Takes song input and formats as needed in genius url
