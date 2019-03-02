@@ -40,7 +40,6 @@ class lyrics:
             return website
 
         def fetch_web(website):
-            # Function scrapes the web to find song lyrics
             source = requests.get(website).text
             soup = BeautifulSoup(source, 'lxml')
             html_lyrics = soup.find('div', class_ = 'lyrics').text
