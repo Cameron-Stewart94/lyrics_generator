@@ -54,7 +54,7 @@ class lyrics:
         self.song_lyrics += html_lyrics
         self.song_name = song_info[0]
         self.artist_name = song_info[1]
-        self.description += '\n'.join(song_info[2 : ])
+        self.song_description += '\n'.join(song_info[2 : ])
         return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
 
     def write_to_txt_file(self):
