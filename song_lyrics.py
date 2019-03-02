@@ -58,7 +58,7 @@ class lyrics:
 
         song_url = format_song_to_url(self.artist_name, self.song_name)
         web_scrape = fetch_web(song_url)
-        song_info = remove_whitespace(song_info)
+        song_info = remove_whitespace(web_scrape)
 
         self.song_lyrics += html_lyrics
         self.song_name = song_info[0]
