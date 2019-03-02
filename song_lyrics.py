@@ -21,27 +21,33 @@ class lyrics:
 
     def fetch_data(self):
         #Function fetches lyrics from genius
-        artist_name = self.artist_name
-        artist_name = artist_name.lower()
-        artist_name = artist_name[0].upper() + artist_name[1:]
-        artist_name = artist_name.split()
-        artist_name = '-'.join(artist_name)
-        # Takes artist input and formats string as needed in genius url
 
-        song_name = self.song_name
-        song_name = song_name.split()
-        song_name = '-'.join(song_name)
-        # Takes song input and formats as needed in genius url
+        def format_song_to_url(artist_name, song_name):
+            # Function takes user song choice and formats string to git genius url
+            artist_name = artist_name.lower()
+            artist_name = artist_name[0].upper() + artist_name[1:]
+            artist_name = artist_name.split()
+            artist_name = '-'.join(artist_name)
+            # Takes artist input and formats string as needed in genius url
 
-        title = artist_name + '-' + song_name + '-lyrics'
-        website = 'http://genius.com/{title}'.format(title = title)
-        # Creates full web address using formated user inputs
+            song_name = self.song_name
+            song_name = song_name.split()
+            song_name = '-'.join(song_name)
+            # Takes song input and formats as needed in genius url
 
-        source = requests.get(website).text
-        soup = BeautifulSoup(source, 'lxml')
-        html_lyrics = soup.find('div', class_ = 'lyrics').text
-        song_info = soup.find('div', class_ = 'header_with_cover_art-primary_info').text
-        # Scraps desired song from genius.com using requests and BeautifulSoup
+            title = artist_name + '-' + song_name + '-lyrics'
+            website = 'http://genius.com/{title}'.format(title = title)
+            # Creates full web address using formated user inputs
+            return website
+
+        def scrape_web(website):
+            # Function scrapes the web to find song lyrics
+            source = requests.get(website).text
+            soup = BeautifulSoup(source, 'lxml')
+            html_lyrics = soup.find('div', class_ = 'lyrics').text
+            song_info = soup.find('div', class_ = 'header_with_cover_art-primary_info').text
+
+            # Scraps desired song from genius.com using requests and BeautifulSoup
 
         def remove_whitespace(string):
             #Funtion removes blank lines from song_info string
@@ -49,6 +55,9 @@ class lyrics:
             song_info_lst = [i for i in song_info_lst if len(i) > 0]
             return song_info_lst
 
+
+        song_url = format_song_to_url(self.artist_name, self.song_name)
+        web_scrape = scrape_web(song_url)
         song_info = remove_whitespace(song_info)
 
         self.song_lyrics += html_lyrics
