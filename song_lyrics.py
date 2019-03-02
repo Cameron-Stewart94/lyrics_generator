@@ -40,7 +40,7 @@ class lyrics:
             # Creates full web address using formated user inputs
             return website
 
-        def scrape_web(website):
+        def fetch_web(website):
             # Function scrapes the web to find song lyrics
             source = requests.get(website).text
             soup = BeautifulSoup(source, 'lxml')
@@ -57,7 +57,7 @@ class lyrics:
 
 
         song_url = format_song_to_url(self.artist_name, self.song_name)
-        web_scrape = scrape_web(song_url)
+        web_scrape = fetch_web(song_url)
         song_info = remove_whitespace(song_info)
 
         self.song_lyrics += html_lyrics
