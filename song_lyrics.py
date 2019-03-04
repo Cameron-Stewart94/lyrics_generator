@@ -16,14 +16,14 @@ class lyrics:
         self.song_description = song_description
 
     def __repr__(self):
-        # Function return song name and artis name when printed
+        # Function returns chosen song name and artist name when printed
         return 'You chose {song}, by {artist}...'.format(song=self.song_name, artist=self.artist_name)
 
     def fetch_data(self):
-        #Function fetches lyrics from genius
+        #Function fetches song information from the web
 
         def format_song_to_url(artist_name, song_name):
-            # Function takes user song choice and formats string to git genius url
+            # Function takes user song choice and formats strings to genius url
             artist_name = artist_name.lower()
             artist_name = artist_name[0].upper() + artist_name[1:]
             artist_name = artist_name.split()
@@ -40,15 +40,15 @@ class lyrics:
             return website
 
         def fetch_web(website):
+            # Scrapes song information from genius.com using requests and BeautifulSoup
             source = requests.get(website).text
             soup = BeautifulSoup(source, 'lxml')
             html_lyrics = soup.find('div', class_ = 'lyrics').text
             song_info = soup.find('div', class_ = 'header_with_cover_art-primary_info').text
             return {'Lyrics' : html_lyrics, 'Song Information' : song_info}
-            # Scraps desired song from genius.com using requests and BeautifulSoup
 
         def remove_whitespace(string):
-            #Funtion removes blank lines from song_info string
+            #Funtion removes blank lines from scraped song information
             song_info_lst = string.split('\n')
             song_info_lst = [i for i in song_info_lst if len(i) > 0]
             return song_info_lst
@@ -57,6 +57,7 @@ class lyrics:
         song_url = format_song_to_url(self.artist_name, self.song_name)
         web_scrape = fetch_web(song_url)
         song_info = remove_whitespace(web_scrape['Song Information'])
+        # Calls three fetch data functions and stores results in variabled
 
         self.song_lyrics += web_scrape['Lyrics']
         self.song_name = song_info[0]
