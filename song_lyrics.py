@@ -40,7 +40,6 @@ class lyrics:
             return website
 
         def fetch_web(website):
-            # Scrapes song information from genius.com using requests and BeautifulSoup
             source = requests.get(website).text
             soup = BeautifulSoup(source, 'lxml')
             html_lyrics = soup.find('div', class_ = 'lyrics').text
@@ -65,7 +64,7 @@ class lyrics:
         web_scrape = fetch_web(song_url)
         song_info = remove_whitespace(web_scrape['Song Information'])
         save_data = save_song_data(web_scrape, song_info)
-        # Calls three fetch data functions and stores results in variabled
+        # Calls four fetch data functions and stores results in song_lyrics and song_description variables
 
         return save_data
 
