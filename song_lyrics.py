@@ -53,17 +53,23 @@ class lyrics:
             song_info_lst = [i for i in song_info_lst if len(i) > 0]
             return song_info_lst
 
+        def save_song_data(self, web_scrape, song_info):
+            self.song_lyrics += web_scrape['Lyrics']
+            self.song_name = song_info[0]
+            self.artist_name = song_info[1]
+            self.song_description += '\n'.join(song_info[2 : ])
+            return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
+
 
         song_url = format_song_to_url(self.artist_name, self.song_name)
         web_scrape = fetch_web(song_url)
         song_info = remove_whitespace(web_scrape['Song Information'])
+        save_data = save_song_data(web_scrape, song_info)
         # Calls three fetch data functions and stores results in variabled
 
-        self.song_lyrics += web_scrape['Lyrics']
-        self.song_name = song_info[0]
-        self.artist_name = song_info[1]
-        self.song_description += '\n'.join(song_info[2 : ])
-        return {'song' : song_info[0], 'artist' : song_info[1], 'description' : '\n'.join(song_info[2 : ]) }
+        return save_data
+
+        
 
     def write_to_txt_file(self):
         # Funtion writes song lyrics to txt file and saves on PC
