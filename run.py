@@ -33,7 +33,7 @@ def run_programme():
             menu_choice = input()
 
             if menu_choice in method_options['Print Lyrics']:
-                song_lyrics_generator.print_lyrics()
+                print(song_lyrics_generator.print_lyrics())
 
             elif menu_choice in method_options['Save as text file']:
                 song_lyrics_generator.write_to_txt_file()
