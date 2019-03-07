@@ -97,3 +97,6 @@ class lyrics:
         # Creates mp3 file of song
 
         return
+
+    def print_lyrics_backwards(self):
+        return self.song_lyrics[::-1]
