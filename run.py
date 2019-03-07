@@ -22,8 +22,8 @@ def run_programme():
             run_programme()
         # Attemps to fetch song data from the web, if invalid choice is entered, the programme asks the user to try again
     else:
-        quit = False
-        while quit == False:
+        while True:
+
             print('')
             print(menu[0])
             sleep(1)
@@ -49,6 +49,6 @@ def run_programme():
                 run_programme()
 
             elif menu_choice in method_options['Quit']:
-                quit = True
+                break
 
 run_programme()
