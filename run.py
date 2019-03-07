@@ -5,7 +5,6 @@ def run_programme():
     # Funtion to run the programme
 
     with open('menus/main_menu.txt', 'r') as menu_file:
-        print(menu_file.read())
         for line in menu_file:
             print(line)
 
