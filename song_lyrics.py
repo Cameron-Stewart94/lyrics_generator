@@ -120,4 +120,4 @@ class lyrics:
 
         sorted_dic = sorted(count_dict.items(), key = lambda t: t[1], reverse=True)
 
-        return sorted_dic[0]
+        return sorted_dic[0: 10]
