@@ -5,8 +5,8 @@ def run_programme():
     # Funtion to run the programme
 
     with open('menus/main_menu.txt', 'r') as menu_file:
-        for line in menu_file:
-            print(line, end ='')
+        options = [line for line in menu_file]
+        print(options)
 
 
     """user_choices = ask_user()
