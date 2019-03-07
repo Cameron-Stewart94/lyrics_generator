@@ -68,7 +68,8 @@ class lyrics:
 
         return save_data
 
-
+    def print_lyrics(self):
+        return self.song_lyrics
 
     def write_to_txt_file(self):
         # Funtion writes song lyrics to txt file and saves on PC
