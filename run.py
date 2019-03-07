@@ -4,7 +4,7 @@ from song_lyrics import lyrics
 def run_programme():
     # Funtion to run the programme
 
-    with open('menus/main_menu.txt', r) as menu_file:
+    with open('menus/main_menu.txt', 'r') as menu_file:
         print(menu_file.read())
 
 
