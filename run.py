@@ -6,9 +6,9 @@ def run_programme():
     # Funtion to run the programme
 
     method_options = {
-    'Print Lyrics' : [1, 'print', 'print_lyrics'],
-    'Save as text file' : [2, 'text', 'text file', 'save as text file' , 'txt'],
-    'Save as mp3 file' : [3, 'mp3', 'mp3 file', 'save as mp3 file'],
+    'Print Lyrics' : ['1', 'print', 'print_lyrics'],
+    'Save as text file' : ['2', 'text', 'text file', 'save as text file' , 'txt'],
+    'Save as mp3 file' : ['3', 'mp3', 'mp3 file', 'save as mp3 file'],
     'Quit' : [4, 'Q', 'Quit', 'Exit']
     }
 
