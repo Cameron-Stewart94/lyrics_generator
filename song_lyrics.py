@@ -118,4 +118,6 @@ class lyrics:
                     count += 1
             count_dict[word] = count
 
-        return count_dict
+        sorted_dic = sorted(count_dict.items(), key = lambda t: t[1])
+
+        return sorted_dic
