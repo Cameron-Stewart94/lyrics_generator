@@ -5,9 +5,10 @@ def run_programme():
     # Funtion to run the programme
 
     with open('menus/main_menu.txt', 'r') as menu_file:
-        options = [line for line in menu_file]
-        print(*options)
-        print(options[1])
+        menu = [line for line in menu_file]
+        print(*menu)
+        options = menu[2:]
+        print(options)
 
 
     """user_choices = ask_user()
