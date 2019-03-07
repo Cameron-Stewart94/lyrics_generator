@@ -46,6 +46,7 @@ def run_programme():
                 song_lyrics_generator.write_to_mp3_file()
 
             elif menu_choice in method_options['Choose another song']:
+                break
                 run_programme()
 
             elif menu_choice in method_options['Quit']:
