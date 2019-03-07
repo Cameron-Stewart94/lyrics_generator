@@ -30,7 +30,7 @@ def run_programme():
             print(song_lyrics_generator)
             sleep(1)
             print(*menu)
-            menu_choice = input()
+            menu_choice = input().lower()
 
             if menu_choice in method_options['Print Lyrics']:
                 print(song_lyrics_generator.print_lyrics())
