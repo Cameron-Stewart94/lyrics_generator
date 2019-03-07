@@ -9,7 +9,7 @@ def run_programme():
     'Print Lyrics' : ['1', 'print', 'print_lyrics'],
     'Save as text file' : ['2', 'text', 'text file', 'save as text file' , 'txt'],
     'Save as mp3 file' : ['3', 'mp3', 'mp3 file', 'save as mp3 file'],
-    'Quit' : [4, 'Q', 'Quit', 'Exit']
+    'Quit' : ['4', 'q', 'quit', 'exit']
     }
 
     with open('menus/main_menu.txt', 'r') as menu_file:
