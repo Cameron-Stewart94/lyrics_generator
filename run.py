@@ -31,10 +31,8 @@ def run_programme():
         # Attemps to fetch song data from the web, if invalid choice is entered, the programme asks the user to try again
     else:
         quit = False
-        n = 0
         while quit == False:
-            if n == 0:
-                print(song_lyrics_generator)
+            print(song_lyrics_generator)
             sleep(1)
             print(*menu)
             menu_choice = input().lower()
@@ -53,7 +51,5 @@ def run_programme():
 
             elif menu_choice in method_options['Quit']:
                 quit = True
-
-            n+=1
 
 run_programme()
