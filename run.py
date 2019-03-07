@@ -10,7 +10,7 @@ def run_programme():
     'Save as text file' : ['2', 'text', 'text file', 'save as text file' , 'txt'],
     'Save as mp3 file' : ['3', 'mp3', 'mp3 file', 'save as mp3 file'],
     'Choose another song' : ['4', 'another', 'choose another', 'choose another song', 'another song'],
-    'Quit' : ['4', 'q', 'quit', 'exit'],
+    'Quit' : ['5', 'q', 'quit', 'exit'],
     }
     # Creates dictionary for user input to choose an option from
 
