@@ -24,9 +24,7 @@ def run_programme():
     else:
         quit = False
         while quit == False:
-            print(song_lyrics_generator)
-            sleep(1)
-            print(*menu)
+            print(menue[0])
             menu_choice = input().lower()
 
             if menu_choice in method_options['Print Lyrics']:
