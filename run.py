@@ -28,7 +28,7 @@ def run_programme():
             sleep(1)
             print(song_lyrics_generator)
             sleep(1)
-            print(*menu[3: ])
+            print(*menu[2: ])
 
             menu_choice = input().lower()
 
