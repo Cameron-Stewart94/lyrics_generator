@@ -5,4 +5,5 @@ What would you like to do:
   1. Print Lyrics
   2. Save Lyrics as text file
   3. Save Lyrics as mp3 file
-  4. Quit
+  4. Choose Another Song
+  5. Quit
