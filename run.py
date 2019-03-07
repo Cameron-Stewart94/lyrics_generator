@@ -18,8 +18,14 @@ def run_programme():
         song_lyrics_generator.fetch_data()
     except:
         try_again = input('Invalid choice, try again? ').lower()
-        if try_again == 'y' or try_again == 'Y':
-            run_programme()
+        while True:
+            if try_again == 'y' or try_again == 'yes':
+                run_programme()
+            elif try_again =='n' or try_again == 'no':
+                break
+            else:
+                try_again = input('Please enter yes or no: ')
+
         # Attemps to fetch song data from the web, if invalid choice is entered, the programme asks the user to try again
     else:
         while True:
