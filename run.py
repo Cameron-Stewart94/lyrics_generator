@@ -7,6 +7,7 @@ def run_programme():
     with open('menus/main_menu.txt', 'r') as menu_file:
         options = [line for line in menu_file]
         print(*options)
+        print(options[1])
 
 
     """user_choices = ask_user()
