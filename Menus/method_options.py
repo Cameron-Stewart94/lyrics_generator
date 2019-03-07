@@ -6,3 +6,5 @@ method_options = {
 'Print lyrics backwards' : ['5','backwards', 'print backwards', 'reverse', 'print lyrics backwards'],
 'Quit' : ['6', 'q', 'quit', 'exit']
 }
+
+print(method_options)
