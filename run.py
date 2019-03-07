@@ -36,6 +36,7 @@ def run_programme():
                 print('Printing Lyrics...')
                 sleep(1)
                 print(song_lyrics_generator.print_lyrics())
+                
 
             elif menu_choice in method_options['Save as text file']:
                 song_lyrics_generator.write_to_txt_file()
