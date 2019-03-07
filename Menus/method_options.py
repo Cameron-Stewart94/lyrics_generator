@@ -7,4 +7,4 @@ method_options = {
 'Quit' : ['6', 'q', 'quit', 'exit']
 }
 
-print(method_options)
+print('a')
