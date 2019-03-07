@@ -24,7 +24,7 @@ def run_programme():
     else:
         quit = False
         while quit == False:
-            print(menue[0])
+            print(menu[0])
             menu_choice = input().lower()
 
             if menu_choice in method_options['Print Lyrics']:
