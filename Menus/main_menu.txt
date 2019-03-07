@@ -7,4 +7,5 @@ What would you like to do:
   3. Save Lyrics as mp3 file
   4. Choose Another Song
   5. Print Lyrics Backwards
-  6. Quit
+  6. Most used word
+  7. Quit

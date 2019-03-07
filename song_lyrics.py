@@ -100,3 +100,22 @@ class lyrics:
 
     def print_lyrics_backwards(self):
         return self.song_lyrics[::-1]
+
+    def most_used_word(self):
+        remove_verse_headings = self.song_lyrics
+        remove_verse_headings = re.sub("\[[^]]+\]", "", remove_verse_headings)
+
+        lyrics_lst = remove_verse_headings.split()
+        lyrics_set = set(lyrics_lst)
+
+
+        count_dict = {}
+
+        for word in lyrics_set:
+            count = 0
+            for matching_word in lyrics_lst:
+                if word == matching word:
+                    count += 1
+            count_dict[word] = count
+
+        return count_dict

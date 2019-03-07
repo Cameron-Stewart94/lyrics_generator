@@ -59,6 +59,9 @@ def run_programme():
             elif menu_choice in method_options['Print lyrics backwards']:
                 print(song_lyrics_generator.print_lyrics_backwards())
 
+            elif menu_choice in method_options['Most used word']:
+                print(song_lyrics_generator.most_used_word())
+
 
             elif menu_choice in method_options['Quit']:
                 break
