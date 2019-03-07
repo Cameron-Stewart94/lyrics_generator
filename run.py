@@ -4,7 +4,11 @@ from song_lyrics import lyrics
 def run_programme():
     # Funtion to run the programme
 
-    user_choices = ask_user()
+    with open('menus/main_menu.txt', r) as menu_file:
+        print(menu_file.read())
+
+
+    """user_choices = ask_user()
     song_lyrics_generator = lyrics(user_choices['Artist'], user_choices['Song'])
     # Creates instance of song_lyrics_generator
 
@@ -28,6 +32,7 @@ def run_programme():
         if another_song == True:
             run_programme()
             # Runs Programme again if user asks it to
+            """
 
 
 run_programme()
