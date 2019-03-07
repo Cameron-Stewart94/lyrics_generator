@@ -114,7 +114,7 @@ class lyrics:
         for word in lyrics_set:
             count = 0
             for matching_word in lyrics_lst:
-                if word == matching word:
+                if word == matching_word:
                     count += 1
             count_dict[word] = count
 
