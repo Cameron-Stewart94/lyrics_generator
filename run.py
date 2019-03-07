@@ -25,7 +25,9 @@ def run_programme():
         quit = False
         while quit == False:
             print(menu[0])
+            sleep(1)
             print(song_lyrics_generator)
+            sleep(1)
             print(*menu[3: ])
 
             menu_choice = input().lower()
