@@ -1,5 +1,6 @@
 from ask_user_input import ask_user, ask_user_again
 from song_lyrics import lyrics
+from time import sleep
 
 def run_programme():
     # Funtion to run the programme
@@ -14,12 +15,35 @@ def run_programme():
     with open('menus/main_menu.txt', 'r') as menu_file:
         menu = [line for line in menu_file]
 
+    user_choices = ask_user()
+    song_lyrics_generator = lyrics(user_choices['Artist'], user_choices['Song'])
+
     try:
         song_lyrics_generator.fetch_data()
     except:
         try_again = input('Invalid choice, try again? ').lower()
         if try_again == 'y' or try_again == 'Y':
             run_programme()
+    else:
+        quit = False
+        while quit == False:
+            print(song_lyrics_generator)
+            sleep(1)
+            print(*menu)
+            menu_choice = input()
+
+            if menu_choice in method_options['Print Lyrics']:
+                song_lyrics_generator.print_lyrics()
+
+            elif menu_choice in method_options['Save as text file']:
+                song_lyrics_generator.write_to_txt_file()
+
+            elif menu_choice in method_options['Save as mp3 file']:
+                song_lyrics_generator.write_to_mp3_file()
+
+            elif menu_choice in method_options['Quit']:
+                quit = True
+
 
 
 
