@@ -21,6 +21,7 @@ def run_programme():
         while True:
             if try_again == 'y' or try_again == 'yes':
                 run_programme()
+                break
             elif try_again =='n' or try_again == 'no':
                 break
             else:
