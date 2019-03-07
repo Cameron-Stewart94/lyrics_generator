@@ -1,18 +1,10 @@
 from ask_user_input import ask_user, ask_user_again
 from song_lyrics import lyrics
 from time import sleep
+import method_options
 
 def run_programme():
     # Funtion to run the programme
-
-    method_options = {
-    'Print Lyrics' : ['1', 'print', 'print_lyrics'],
-    'Save as text file' : ['2', 'text', 'text file', 'save as text file' , 'txt'],
-    'Save as mp3 file' : ['3', 'mp3', 'mp3 file', 'save as mp3 file'],
-    'Choose another song' : ['4', 'another', 'choose another', 'choose another song', 'another song'],
-    'Quit' : ['5', 'q', 'quit', 'exit'],
-    }
-    # Creates dictionary for user input to choose an option from
 
     with open('menus/main_menu.txt', 'r') as menu_file:
         menu = [line for line in menu_file]
