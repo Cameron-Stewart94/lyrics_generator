@@ -4,12 +4,24 @@ from song_lyrics import lyrics
 def run_programme():
     # Funtion to run the programme
 
+    method_options = {
+    'Print Lyrics' : [1, 'print', 'print_lyrics'],
+    'Save as text file' : [2, 'text', 'text file', 'save as text file' , 'txt'],
+    'Save as mp3 file' : [3, 'mp3', 'mp3 file', 'save as mp3 file'],
+    'Quit' : [4, 'Q', 'Quit', 'Exit']
+    }
+
     with open('menus/main_menu.txt', 'r') as menu_file:
         menu = [line for line in menu_file]
 
-    print(*menu)
+    try:
+        song_lyrics_generator.fetch_data()
+    except:
+        try_again = input('Invalid choice, try again? ').lower()
+        if try_again == 'y' or try_again == 'Y':
+            run_programme()
 
-    method_choice = input()
+
 
 
     """user_choices = ask_user()
