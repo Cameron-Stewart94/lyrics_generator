@@ -1,7 +1,7 @@
 from ask_user_input import ask_user, ask_user_again
 from song_lyrics import lyrics
 from time import sleep
-import method_options
+from method_options import method_options
 
 def run_programme():
     # Funtion to run the programme
