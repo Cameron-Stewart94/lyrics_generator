@@ -56,7 +56,7 @@ def run_programme():
                 run_programme()
                 break
 
-            elif menu_choice in method_options['Print lyrics backwards']:
+            elif menu_choice in method_options['p']:
                 print(song_lyrics_generator.print_lyrics_backwards())
 
 

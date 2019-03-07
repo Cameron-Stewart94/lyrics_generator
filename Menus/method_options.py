@@ -3,6 +3,6 @@ method_options = {
 'Save as text file' : ['2', 'text', 'text file', 'save as text file' , 'txt'],
 'Save as mp3 file' : ['3', 'mp3', 'mp3 file', 'save as mp3 file'],
 'Choose another song' : ['4', 'another', 'choose another', 'choose another song', 'another song'],
-'Print lyrics backwards' : ['5','backwards', 'print backwards', 'reverse', 'print lyrics backwards'],
+'p' : ['5','backwards', 'print backwards', 'reverse', 'print lyrics backwards'],
 'Quit' : ['6', 'q', 'quit', 'exit'],
 }
