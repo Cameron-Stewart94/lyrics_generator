@@ -105,8 +105,7 @@ class lyrics:
         remove_verse_headings = self.song_lyrics
         remove_verse_headings = re.sub("\[[^]]+\]", "", remove_verse_headings)
 
-        lyrics_lst = remove_verse_headings.split()
-        lyrics_lst = re.split('; |, |\*|\n',lyrics_lst)
+        lyrics_lst = re.split('; |, |\*|\n',remove_verse_headings)
         lyrics_set = set(lyrics_lst)
 
 
