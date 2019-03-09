@@ -109,7 +109,7 @@ class lyrics:
         punctuation = '?!,.()"[]'
 
         for i in punctuation:
-            title_case.replace(i, '')
+            title_case = title_case.replace(i, '')
 
         lyrics_lst = title_case.split()
         lyrics_set = set(lyrics_lst)
