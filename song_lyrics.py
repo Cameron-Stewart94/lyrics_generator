@@ -106,12 +106,10 @@ class lyrics:
         remove_verse_headings = re.sub("\[[^]]+\]", "", remove_verse_headings)
         title_case = remove_verse_headings.title()
 
-        punctuation_lst = ['?!,.()"[]']
+        punctuation = '?!,.()"[]'
 
-        for word in title_case:
-            for letter in word:
-                if letter in punctuation_lst:
-                    letter.replace(letter, '')
+        for i in punctuation:
+            title_case.replace(i, '')
 
         lyrics_lst = title_case.split()
         lyrics_set = set(lyrics_lst)
