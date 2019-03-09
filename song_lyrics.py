@@ -104,9 +104,10 @@ class lyrics:
     def most_used_word(self):
         remove_verse_headings = self.song_lyrics
         remove_verse_headings = re.sub("\[[^]]+\]", "", remove_verse_headings)
-        remove_punctuation = re.sub(r'[^\w\s]','',remove_verse_headings)
+        remove_punctuation = remove_verse_headings.translate(None, r"()\"'?![]")
+        title_case = remove_punctuation.title()
 
-        lyrics_lst = remove_punctuation.split()
+        lyrics_lst = title_case.split()
         lyrics_set = set(lyrics_lst)
 
 
