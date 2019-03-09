@@ -46,6 +46,7 @@ def run_programme():
                 print(song_lyrics_generator.print_lyrics())
 
             elif menu_choice in method_options['Print Description']:
+                print('')
                 print('Printing Descripton...')
                 sleep(1)
                 print(song_lyrics_generator.print_song_information())
