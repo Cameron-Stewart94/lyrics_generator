@@ -126,4 +126,4 @@ class lyrics:
 
         sorted_dic = sorted(count_dict.items(), key = lambda t: t[1], reverse=True)
 
-        return sorted_dic[0: 10]
+        return 'The Most used word is {word}, which was used {times} times'.format(word=sorted_dic[0][0], times=sorted_dic[0][1])
